@@ -14,8 +14,8 @@ LOG_FILE="/root/unifi_cert_update.log"
 # Test mode flag (default to "no")
 TEST_MODE="no"
 
-# Full path to the script (update this to match your actual path)
-SCRIPT_PATH="/root/scripts/copyunmstounifi.sh"
+# Full path to the script 
+SCRIPT_PATH="$(realpath "$0")"
 
 # Check for --test parameter
 if [[ "$1" == "--test" && "$2" == "yes" ]]; then
